@@ -47,14 +47,14 @@ int main() {
   PORTB = 0x00;
   
   while (1) {
-    while (pressed_buttons_count() > 1) {}
+    //while (pressed_buttons_count() > 1) {}
     if (pressed_buttons_count() == 1) {
-      PORTB = 0x00;
+      PORTB = 0x00; 
       int value = get_pressed_button();
       display(value);   
       while (button_is_pressed(value)) {}
     }
-    _delay_ms(500);
+    //_delay_ms(500);
   }
 
 }
